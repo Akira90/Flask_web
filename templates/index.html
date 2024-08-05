@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Flask Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Nax Site</h1>
+    <p>Hello Ther! Wellcom To Ours Website.</p>
+    <a href="{{ url_for('login') }}">Click Her To Login</a>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Video</title>
+</head>
+<body>
+    <h1>Download Your Video</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if message %}
+        <p style="color: green;">{{ message }}</p>
+    {% endif %}
+    <form method="POST">
+        <label for="url">YouTube URL:</label>
+        <input type="text" name="url" id="url" required>
+        <button type="submit">Download</button>
+    </form>
+</body>
+</html>

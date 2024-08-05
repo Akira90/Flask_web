@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Hex color generator</title>
+
+    <style>
+
+        body {
+            
+            margin: 0;
+
+            padding: 0;
+
+            display: grid;
+
+            place-items: center;
+
+            height: 100vh;
+
+            font-size: 20px;
+
+        }
+ 
+        h1 {
+           font-size: 80px;
+           color: black;
+           
+        }    
+
+        .main {
+
+            height: 200px;
+
+            width: 200px;
+
+            background: #3A3A38;
+
+            border-radius: 10px;
+
+            display: grid;
+
+            place-items: center;
+
+            color: #fff;
+
+            font-family: verdana;
+
+            border-radius: 15px;
+            transition: .3s ease all;
+
+        }       
+
+        #colorPicker {
+
+            background-color: none;
+
+            outline: none;
+
+            border: none;
+
+            height: 80px;
+
+            width: 100px;
+
+            cursor: pointer;
+
+        }       
+
+        #box {
+
+            outline: none;
+
+            border: 2px solid #333;
+
+            border-radius: 50px;
+
+            height: 40px;
+
+            width: 120px;
+
+            padding: 0 10px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1><u>Hex Color Generator</u></h1>
+
+    <div class="main">
+
+        <!-- To select the color -->
+
+      Color Picker: <input type="color"id="colorPicker"value="#6a5acd">
+ 
+        <!-- To display hex code of the color -->
+
+        Hex Code: <input type="text" id="box">
+
+    </div>
+
+    <script>
+
+        function myColor() {
+
+            // Get the value return by color picker
+
+            let color = document.getElementById('colorPicker').value;
+
+            // Set the color as background
+
+            document.body.style.backgroundColor = color;
+ 
+
+            // Take the hex code
+
+            document.getElementById('box').value = color;
+
+        }
+
+        // When user clicks over color picker,
+
+        // myColor() function is called
+
+        document.getElementById('colorPicker')
+
+            .addEventListener('input', myColor);
+
+    </script>
+
+</body>
+
+</html>
